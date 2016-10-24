@@ -20,7 +20,7 @@ This is the server-side of our NEAP App. It's a RESTful API. It serves up JSON.
 
 1. Setup Heroku
 1. Push to Heroku
-1. Setup DB
+1. Setup DB : `heroku addons:create heroku-postgresql:hobby-dev`
 1. Run Migrations
 1. Run Seeds
 1. Heroku Restart
