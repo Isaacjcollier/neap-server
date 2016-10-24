@@ -1,5 +1,7 @@
 # NEAP Server-Side
 
+Deployed Website : https://rocky-journey-79261.herokuapp.com/
+
 This is the server-side of our NEAP App. It's a RESTful API. It serves up JSON.
 
 ## Development
@@ -19,8 +21,12 @@ This is the server-side of our NEAP App. It's a RESTful API. It serves up JSON.
 ## Deployment
 
 1. Setup Heroku
-1. Push to Heroku
+  - `heroku create`
+1. Push to Heroku (do this step everytime you make a change that needs to be applied to the Heroku app)
+  - `git add -A`
+  - `git commit -m'message goes here'`
+  - `git push heroku master`
 1. Setup DB : `heroku addons:create heroku-postgresql:hobby-dev`
-1. Run Migrations
-1. Run Seeds
+1. Run Migrations : `heroku run knex migrate:latest --env production`
+1. Run Seeds: `heroku run knex seed:run -- env production`
 1. Heroku Restart
